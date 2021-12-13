@@ -2,6 +2,10 @@
 
 My Solution About CS162.
 
+# Lab: [pintOS](https://github.com/PeterWrighten/CS162/tree/main/pintOS)
+
+
+
 # Note
 
 ## Lecture 1
