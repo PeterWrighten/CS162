@@ -8,7 +8,7 @@ My Solution About CS162.
 
 # Note
 
-## Lecture 1
+## Lecture 1: Overview
 
 **OS Basic: Virtualization to Hardware**
 
@@ -101,4 +101,62 @@ Fault Isolation
 Protection and Portability
 
 - Java interface safe and stable across many platform.
+
+## Lecture 2: Four fundamental concepts
+
+**What is an operating system?**
+
+Special layer of software that provides application software access to hardware resources.
+
+- Convenient abstraction of complex hardware devices.
+- Protected access to shared resources
+- Security and authentication
+- Communication amongst logical entities
+
+**OS Archaeology**
+
+Because of the cost of developing an OS from scratch, most modern OSes have a long lineage.
+
+```mermaid
+graph LR  
+
+Multics --> ATTUnix --> BSDUnix --> SunOS
+
+Mach+UnixBSD --> NextStep --> XNU --> macOS&iOS
+
+MINIX --> Linux --> Android&Chromium
+
+CP/M --> QDOS --> MS-DOS --> Windows
+
+```
+
+**Four fundamental concepts**
+
+Thread
+
+- Single unique execution context: fully describes program state.
+- Program Counter, Registers, Execution Flags, Stack.
+
+Address Space(with translation)
+
+- Programs execute in an address space that is distinct from the memory space of the physical machine
+
+Process
+
+- An instance of an executing program is a process consisting of an address space and one or more threads of control.
+
+Dual mode operation/Protection
+
+- Only the "system" has the ability to access certain resources.
+- The OS and the hardware are protected from user programs and user programs are isolated from one another by controlling the translation from program virtual addresses to machine physical address.
+
+**OS Bottom Line: Run Programs**
+
+- Load instruction and data segments of executable file into memory.
+- Create stack and heap.
+- "Transfer control to program"
+- Provide services to program.
+- While protecting OS and program.
+
+
 
